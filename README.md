@@ -1,6 +1,5 @@
-# Adventures-Of-Monkey-King
 =====================================================================
-The Adventures of Monkey King
+#The Adventures of Monkey King
 =====================================================================
 Created by Kyle Del Castillo
 
