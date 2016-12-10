@@ -6,6 +6,7 @@ Created by Kyle Del Castillo
 The Adventures of Monkey King is a 2D platformer game that is similar to Super Mario. Right now, the game is still currently in development (alpha stage).
 
 License:
+
 Copyright (c) 2016 Kyle Del Castillo <kyledc0804@gmail.com>
 https://gamenewb.wordpress.com/
 
