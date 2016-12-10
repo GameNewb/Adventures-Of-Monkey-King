@@ -8,7 +8,7 @@ The Adventures of Monkey King is a 2D platformer game that is similar to Super M
 License:
 
 Copyright (c) 2016 Kyle Del Castillo 
-<kyledc0804@gmail.com>
-https://gamenewb.wordpress.com/
+ <kyledc0804@gmail.com>
+ https://gamenewb.wordpress.com/
 
 If you have any questions regarding the project or would like to use some assets of the game, please contact me directly through e-mail.
