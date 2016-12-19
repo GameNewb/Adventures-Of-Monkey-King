@@ -2,7 +2,6 @@
 
 if(!place_meeting(x, y+1, obj_solid)) //If there's no solid obj under 1 pixel
 {
-    
     vspd += grav; //Add gravity to vertical speed
     
     //Player is in the air
@@ -18,7 +17,6 @@ if(!place_meeting(x, y+1, obj_solid)) //If there's no solid obj under 1 pixel
     
     if(attack && jump_attacked == false)
     {
-
         //Play swing sound
         audio_emitter_pitch(jump_attack_em, random_range(.8, 1.2));
         audio_emitter_gain(jump_attack_em, .2);
@@ -50,14 +48,16 @@ else
     {
         sprite_index = spr_player_idle;
    
-        if(interact && place_meeting(x+30, y, obj_speaker) || interact && place_meeting(x-30, y, obj_speaker)) //If there's a signboard
+        if(interact && place_meeting(x+30, y, obj_speaker) 
+        || interact && place_meeting(x-30, y, obj_speaker) 
+        || interact && place_meeting(x, y, obj_speaker)) //If there's a signboard
         {
             //Interaction
             sprite_index = spr_player_idle; //Stop animation
             state = interact_state;
             if(state != player_move_state)
             {
-                alarm[2] = 0; //Re-initialize move state
+                alarm[2] = .1; //Re-initialize move state
             }
         }
         else if(attack) //Normal attack
@@ -69,19 +69,21 @@ else
             image_index = 0;
             state = thrust_attack_state;
         }
-    }else {
-        if(interact && place_meeting(x+5, y, obj_speaker) || interact && place_meeting(x-5, y, obj_speaker)) //If there's a signboard
+    }else { //For moving
+        if(interact && place_meeting(x+25, y, obj_speaker)
+        || interact && place_meeting(x-25, y, obj_speaker)
+        || interact && place_meeting(x, y, obj_speaker)) //If there's a signboard
         {
             sprite_index = spr_player_idle; //Stop animation
             state = interact_state;
             if(state != player_move_state)
             {
-                alarm[2] = 2; //Re-initialize move state
+                alarm[2] = 1; //Re-initialize move state
             }
         }
         else if(attack) //Stop moving and attack
         {
-            image_index = 0; //Set the animation to frame 0
+            image_index = .1; //Set the animation to frame 0
             state = strike_attack_state;
         }else if(thrust_attack)
         {

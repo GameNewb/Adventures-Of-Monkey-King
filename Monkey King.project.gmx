@@ -106,9 +106,14 @@
         <sprite>sprites\spr_falling_red_bird</sprite>
         <sprite>sprites\spr_bird_mask</sprite>
       </sprites>
-      <sprite>sprites\spr_bandit</sprite>
-      <sprite>sprites\spr_bandit_idle</sprite>
-      <sprite>sprites\spr_bandit_walk</sprite>
+      <sprites name="Bandit">
+        <sprite>sprites\spr_bandit</sprite>
+        <sprite>sprites\spr_bandit_mask</sprite>
+        <sprite>sprites\spr_bandit_walk</sprite>
+        <sprite>sprites\spr_bandit_idle</sprite>
+        <sprite>sprites\spr_bandit_attack_hitbox</sprite>
+        <sprite>sprites\spr_bandit_attack</sprite>
+      </sprites>
     </sprites>
     <sprites name="GUI Icons">
       <sprite>sprites\spr_heart</sprite>
@@ -202,6 +207,9 @@
         <script>scripts\bandit_move_left.gml</script>
         <script>scripts\bandit_move_right.gml</script>
         <script>scripts\bandit_idle.gml</script>
+        <script>scripts\bandit_move.gml</script>
+        <script>scripts\bandit_chase_state.gml</script>
+        <script>scripts\bandit_attack_state.gml</script>
       </scripts>
     </scripts>
     <scripts name="Helper States">
@@ -233,6 +241,7 @@
     <objects name="Player Object">
       <object>objects\obj_player</object>
       <object>objects\obj_player_stats</object>
+      <object>objects\obj_parent_damage</object>
       <object>objects\obj_player_damage</object>
       <object>objects\obj_player_thrust_damage</object>
       <object>objects\obj_player_jump_damage</object>
@@ -275,12 +284,14 @@
       </objects>
       <objects name="Cave Objects">
         <object>objects\obj_cave_inner</object>
+        <object>objects\obj_cave_outer2</object>
         <object>objects\obj_cave_outer</object>
         <object>objects\obj_platform_1</object>
         <object>objects\obj_platform_2</object>
         <object>objects\obj_platform_3</object>
         <object>objects\obj_background</object>
         <object>objects\obj_background2</object>
+        <object>objects\obj_background3</object>
       </objects>
       <objects name="Greens">
         <object>objects\obj_grass</object>
@@ -296,13 +307,17 @@
       <object>objects\obj_exit</object>
     </objects>
     <objects name="Enemy Object">
-      <object>objects\obj_bandit</object>
       <objects name="Bird Objects">
         <object>objects\obj_parent_bird</object>
         <object>objects\obj_flying_white_bird</object>
         <object>objects\obj_flying_red_bird</object>
         <object>objects\obj_flying_green_bird</object>
         <object>objects\obj_walking_white_bird</object>
+      </objects>
+      <objects name="Bandit Group">
+        <object>objects\obj_parent_bandit</object>
+        <object>objects\obj_bandit_damage</object>
+        <object>objects\obj_bandit</object>
       </objects>
     </objects>
     <objects name="Menu Object">
@@ -318,6 +333,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu</room>
+    <room>rooms\rm_tutorial2</room>
+    <room>rooms\rm_tutorial3</room>
     <room>rooms\rm_tutorial</room>
     <room>rooms\rm_one</room>
     <room>rooms\rm_two</room>

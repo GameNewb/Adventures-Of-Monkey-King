@@ -28,7 +28,7 @@
             <string>///Draw the background
 
 //Background moves half as fast as the view
-draw_background_tiled(bg_tutorial3, view_xview[0]/2, view_yview[0]/2);
+draw_background_tiled(bg_tutorial2, view_xview[0]/2, view_yview[0]/2);
 </string>
           </argument>
         </arguments>

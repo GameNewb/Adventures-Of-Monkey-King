@@ -14,7 +14,7 @@ if(image_index >= 2 && attacked == false)
     //Create damage instance
     if(image_xscale >= 0) //Facing right
     {
-        var damage = instance_create(x, y, obj_player_damage);
+        var damage = instance_create(x+3, y, obj_player_damage);
         damage.creator = id;
         attacked = true;
     }

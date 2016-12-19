@@ -9,7 +9,7 @@
   <bboxmode>0</bboxmode>
   <bbox_left>1</bbox_left>
   <bbox_right>45</bbox_right>
-  <bbox_top>2</bbox_top>
+  <bbox_top>3</bbox_top>
   <bbox_bottom>34</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -35,8 +35,5 @@
     <frame index="12">images\spr_player_ko_12.png</frame>
     <frame index="13">images\spr_player_ko_13.png</frame>
     <frame index="14">images\spr_player_ko_14.png</frame>
-    <frame index="15">images\spr_player_ko_15.png</frame>
-    <frame index="16">images\spr_player_ko_16.png</frame>
-    <frame index="17">images\spr_player_ko_17.png</frame>
   </frames>
 </sprite>

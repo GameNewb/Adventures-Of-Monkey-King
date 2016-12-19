@@ -173,9 +173,65 @@ get_input();
 //Execute the state
 script_execute(state);
 
+//Fixes interaction bug (player not moving after jumping then interacting)
+if(interaction == true)
+{
+    state = player_move_state;
+    interaction = false;
+}
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bandit_damage">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Take damage from bandit attacking
+
+take_damage();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_parent_bandit">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Take damage from bandit sprite
+
+take_damage();
 </string>
           </argument>
         </arguments>
@@ -222,7 +278,7 @@ if(above_enemy &amp;&amp; falling)
     // Kill the enemy
     with (other)
     {
-        /*
+        
         if(hp == 0)
         {
             state = bird_falling_state;
@@ -231,9 +287,9 @@ if(above_enemy &amp;&amp; falling)
         {
             hp -= 1;
             state = enemy_invincibility;
-        }*/
+        }
         
-        hp = 0;
+        //hp = 0;
     }
     
     //Bounce off the enemy

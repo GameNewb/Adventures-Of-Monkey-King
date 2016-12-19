@@ -57,7 +57,7 @@ alpha = clamp(alpha + (fade * 0.05), 0, 1); //Value, min, max
 
 if(alpha == 1)
 {
-    room_goto(rm_tutorial);
+    room_goto(rm_tutorial2);
     fade = -1;
 }
 

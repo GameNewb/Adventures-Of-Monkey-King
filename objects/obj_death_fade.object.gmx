@@ -55,7 +55,7 @@ audio_stop_all();
             <kind>1</kind>
             <string>///Draw black fade
 
-alpha = clamp(alpha + (fade * 0.015), 0, 1); //Value, min, max
+alpha = clamp(alpha + (fade * 0.0175), 0, 1); //Value, min, max
 
 if(alpha == 1)
 {

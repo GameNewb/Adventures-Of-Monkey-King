@@ -21,7 +21,7 @@ else
 direction_knockback(obj_solid);
 
 //Change back to the move state
-if(hspd == 0 && vspd == 0 || vspd >= 0)
+if(hspd == 0 && vspd == 0 || vspd >= 0 || hspd >= 0)
 {
     image_blend = c_white;
     state = player_move_state;
