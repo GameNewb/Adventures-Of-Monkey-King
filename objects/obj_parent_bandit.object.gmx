@@ -47,6 +47,31 @@ alarm[0] = 240; //After 8 seconds of moving, be idle
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Destroy bandit instance after dying
+
+instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -131,7 +156,7 @@ if(state != bandit_chase_state &amp;&amp; dis &gt; sight)
 dis = distance_to_object(obj_player);
 script_execute(state);
 
-//Check if bird object has been hit/attacked
+//Check if bandit object has been hit/attacked
 if(hit == true || jump_hit == true)
 {
     image_blend = make_colour_rgb(230, 150, 150);
@@ -140,7 +165,7 @@ if(hit == true || jump_hit == true)
 }
 else
 {
-    //Recolor bird
+    //Recolor bandit
     image_blend = c_white; 
 }
 
@@ -187,6 +212,7 @@ if(state == bandit_attack_state)
     attacked = false;
     state = choose(bandit_move_left, bandit_move_right);
 }
+
 </string>
           </argument>
         </arguments>

@@ -231,7 +231,12 @@ take_damage();
             <kind>1</kind>
             <string>///Take damage from bandit sprite
 
-take_damage();
+//Don't take damage if enemy is dead
+if(other.hp != 0)
+{
+    take_damage();
+}
+
 </string>
           </argument>
         </arguments>

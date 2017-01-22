@@ -113,6 +113,7 @@
         <sprite>sprites\spr_bandit_idle</sprite>
         <sprite>sprites\spr_bandit_attack_hitbox</sprite>
         <sprite>sprites\spr_bandit_attack</sprite>
+        <sprite>sprites\spr_bandit_death</sprite>
       </sprites>
     </sprites>
     <sprites name="GUI Icons">
@@ -210,6 +211,7 @@
         <script>scripts\bandit_move.gml</script>
         <script>scripts\bandit_chase_state.gml</script>
         <script>scripts\bandit_attack_state.gml</script>
+        <script>scripts\bandit_death.gml</script>
       </scripts>
     </scripts>
     <scripts name="Helper States">

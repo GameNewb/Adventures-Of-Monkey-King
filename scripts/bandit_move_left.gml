@@ -1,4 +1,4 @@
-///bird_move_left_state
+///bandit_move_left
 
 var wall_at_left = place_meeting(x-1, y, obj_solid);
 var ledge_at_left = !position_meeting(bbox_left-1, bbox_bottom+1, obj_solid);
